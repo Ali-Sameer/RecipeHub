@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <EditText
+        android:id="@+id/search1"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/searchview"
+        android:ems="10"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Search Recipe"
+
+        android:inputType="textFilter"
+        android:paddingStart="50dp"
+        android:textColorHint="#5A5858"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+    </EditText>
+
+
+    <ImageView
+        android:id="@+id/backHome"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/search1"
+        app:layout_constraintEnd_toEndOf="@+id/search1"
+        android:padding="5dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        app:layout_constraintStart_toStartOf="@+id/search1"
+        app:layout_constraintTop_toTopOf="@+id/search1"
+        app:layout_constraintVertical_bias="0.451"
+       />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="408dp"
+        android:id="@+id/search_rv"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/search_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
